@@ -1,0 +1,41 @@
+@import '../styles/variables.scss';
+
+.card {
+  width: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--color-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;  // ✅ fix overflow on image
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .info {
+    padding: var(--space-md);
+
+    h3 {
+      font-size: var(--font-md);
+      color: var(--color-primary);
+    }
+
+    p {
+      font-size: var(--font-sm);
+      color: var(--color-muted);
+    }
+  }
+}
